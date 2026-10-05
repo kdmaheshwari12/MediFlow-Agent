@@ -130,7 +130,7 @@ export default function PrescriptionsPage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
             <Input
               type="text"
-              placeholder="Search by Patient Name, MRN (e.g. MRN-10022), or Phone Number..."
+              placeholder="Search by Patient Name, MRN (e.g. MRN-80022), or Phone Number..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-9 pr-8 text-xs h-10 rounded-xl"

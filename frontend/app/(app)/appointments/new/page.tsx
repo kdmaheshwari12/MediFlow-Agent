@@ -447,7 +447,7 @@ function NewAppointmentContent() {
                   <Input
                     value={mrnInput}
                     onChange={(e) => setMrnInput(e.target.value.toUpperCase())}
-                    placeholder="MRN-10022"
+                    placeholder="MRN-80022"
                     className="font-mono text-sm font-bold uppercase"
                     required
                   />
