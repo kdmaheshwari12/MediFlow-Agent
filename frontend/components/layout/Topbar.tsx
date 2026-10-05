@@ -61,7 +61,7 @@ export function Topbar() {
             <Activity className="h-5 w-5" />
           </div>
           <span className="font-heading font-extrabold text-base tracking-tight text-slate-900 dark:text-white hidden sm:inline-block">
-            MediFlow SaaS
+            MediFlow
           </span>
         </Link>
       </div>

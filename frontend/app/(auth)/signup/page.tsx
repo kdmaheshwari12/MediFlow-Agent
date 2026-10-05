@@ -230,7 +230,7 @@ export default function SignUpPage() {
             <div className="h-10 w-10 rounded-xl bg-white text-teal-800 flex items-center justify-center font-bold">
               <Activity className="h-6 w-6" />
             </div>
-            <span className="font-heading font-extrabold text-2xl tracking-tight">MediFlow SaaS</span>
+            <span className="font-heading font-extrabold text-2xl tracking-tight">MediFlow</span>
           </Link>
         </div>
 

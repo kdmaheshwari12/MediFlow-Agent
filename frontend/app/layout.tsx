@@ -22,7 +22,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'MediFlow SaaS — Production Clinic Operating System',
+  title: 'MediFlow — Production Clinic Operating System',
   description: 'Manage patients, schedule appointments, generate print-ready prescriptions, and automatically send AI follow-up messages.',
 };
 

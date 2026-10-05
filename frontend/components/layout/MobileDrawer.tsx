@@ -43,7 +43,7 @@ export function MobileDrawer() {
           <div className="h-9 w-9 rounded-xl bg-teal-600 flex items-center justify-center text-white font-bold">
             <Activity className="h-5 w-5" />
           </div>
-          <SheetTitle className="font-heading font-extrabold text-lg">MediFlow SaaS</SheetTitle>
+          <SheetTitle className="font-heading font-extrabold text-lg">MediFlow</SheetTitle>
         </div>
         <SheetDescription>Clinic Workspace Navigation</SheetDescription>
       </SheetHeader>

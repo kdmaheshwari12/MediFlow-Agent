@@ -88,8 +88,8 @@ export function Sidebar() {
           </div>
           {!sidebarCollapsed && (
             <div className="flex flex-col truncate">
-              <span className="font-heading font-extrabold text-lg tracking-tight text-white flex items-center gap-1">
-                MediFlow <span className="text-teal-400 text-xs px-1.5 py-0.5 rounded bg-teal-950 border border-teal-800">SaaS</span>
+              <span className="font-heading font-extrabold text-lg tracking-tight text-white">
+                MediFlow
               </span>
             </div>
           )}

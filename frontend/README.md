@@ -1,4 +1,4 @@
-# MediFlow SaaS — Clinical Operating System
+# MediFlow — Clinical Operating System
 
 A Next.js (App Router) + TypeScript + Tailwind CSS + shadcn/ui clinic management frontend.
 

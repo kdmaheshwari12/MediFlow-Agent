@@ -97,7 +97,7 @@ function LoginContent() {
             <div className="h-10 w-10 rounded-xl bg-white text-teal-800 flex items-center justify-center font-bold">
               <Activity className="h-6 w-6" />
             </div>
-            <span className="font-heading font-extrabold text-2xl tracking-tight">MediFlow SaaS</span>
+            <span className="font-heading font-extrabold text-2xl tracking-tight">MediFlow</span>
           </Link>
         </div>
 
@@ -106,7 +106,7 @@ function LoginContent() {
             Clinical Operating System
           </Badge>
           <h1 className="text-4xl font-heading font-extrabold leading-tight">
-            Production-Grade Clinic Management SaaS
+            Production-Grade Clinic Management
           </h1>
           <p className="text-teal-100 text-sm leading-relaxed">
             Manage patient records, schedule appointments, generate print-ready prescriptions, and automatically send AI follow-up messages.
