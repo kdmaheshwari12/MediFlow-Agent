@@ -1,0 +1,31 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "agent": {
+      "root": "agent",
+      "framework": "fastify"
+    },
+    "backend": {
+      "root": "backend",
+      "framework": "fastify"
+    },
+    "frontend": {
+      "root": "frontend",
+      "framework": "nextjs"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "frontend"
+      }
+    }
+  ]
+}
