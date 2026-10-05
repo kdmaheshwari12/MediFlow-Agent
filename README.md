@@ -50,8 +50,8 @@ MediFlow_Agent/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/kdmaheshwari12/MediFlow_Agent.git
-   cd MediFlow_Agent
+   git clone https://github.com/kdmaheshwari12/MediFLow-Agent.git
+   cd MediFLow-Agent
    ```
 
 2. **Setup Agent Service**:
