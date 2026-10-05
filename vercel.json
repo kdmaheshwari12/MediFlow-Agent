@@ -3,11 +3,27 @@
   "services": {
     "agent": {
       "root": "agent",
-      "framework": "fastify"
+      "framework": "fastify",
+      "bindings": [
+        {
+          "type": "service",
+          "service": "backend",
+          "format": "url",
+          "env": "BACKEND_BASE_URL"
+        }
+      ]
     },
     "backend": {
       "root": "backend",
-      "framework": "fastify"
+      "framework": "fastify",
+      "bindings": [
+        {
+          "type": "service",
+          "service": "agent",
+          "format": "url",
+          "env": "AGENT_SERVICE_URL"
+        }
+      ]
     },
     "frontend": {
       "root": "frontend",

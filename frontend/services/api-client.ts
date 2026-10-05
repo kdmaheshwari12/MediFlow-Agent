@@ -21,7 +21,15 @@ export class AppError extends Error {
 export const simulateDelay = (ms: number = 400) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api/v1';
+const getApiBase = () => {
+  if (process.env.NEXT_PUBLIC_API_URL) {
+    return process.env.NEXT_PUBLIC_API_URL.replace(/\/+$/, '');
+  }
+  if (typeof window !== 'undefined') {
+    return `${window.location.origin}/api/v1`;
+  }
+  return 'http://localhost:4000/api/v1';
+};
 
 export async function fetchApi(endpoint: string, options: RequestInit = {}) {
   const supabase = getSupabaseClient();
@@ -45,8 +53,10 @@ export async function fetchApi(endpoint: string, options: RequestInit = {}) {
   options.headers = headers;
 
   let response: Response;
+  const apiBase = getApiBase();
+  const fullUrl = endpoint.startsWith('http') ? endpoint : `${apiBase}${endpoint.startsWith('/') ? '' : '/'}${endpoint}`;
   try {
-    response = await fetch(`${API_BASE}${endpoint}`, options);
+    response = await fetch(fullUrl, options);
   } catch (err: any) {
     // This catches network errors, CORS failures, or server down
     throw new AppError('NETWORK_ERROR', 'Cannot reach the server. Please try again.');

@@ -70,7 +70,9 @@ async function request<T>(
   schema: z.ZodType<T>,
   body?: unknown,
 ): Promise<T> {
-  const url = `${config.BACKEND_BASE_URL}${config.BACKEND_API_PREFIX}${path}`;
+  const rawBackendUrl = (process.env.BACKEND_BASE_URL || config.BACKEND_BASE_URL || "http://localhost:4000").replace(/\/+$/, "");
+  const prefix = config.BACKEND_API_PREFIX.startsWith("/") ? config.BACKEND_API_PREFIX : `/${config.BACKEND_API_PREFIX}`;
+  const url = `${rawBackendUrl}${prefix}${path.startsWith("/") ? path : "/" + path}`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), config.BACKEND_TIMEOUT_MS);
 

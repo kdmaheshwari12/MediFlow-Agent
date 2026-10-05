@@ -38,7 +38,8 @@ export async function callAgent<T>(
   doctorJwt: string,
   timeoutMs: number = 60000
 ): Promise<T> {
-  const baseUrl = env.AGENT_SERVICE_URL.replace(/\/+$/, '');
+  const rawAgentUrl = process.env.AGENT_SERVICE_URL || process.env.AGENT_URL || env.AGENT_SERVICE_URL || 'http://127.0.0.1:8000';
+  const baseUrl = rawAgentUrl.replace(/\/+$/, '');
   const url = `${baseUrl}${path.startsWith('/') ? path : '/' + path}`;
 
   const controller = new AbortController();
