@@ -3,15 +3,7 @@
   "services": {
     "agent": {
       "root": "agent",
-      "framework": "fastify",
-      "bindings": [
-        {
-          "type": "service",
-          "service": "backend",
-          "format": "url",
-          "env": "BACKEND_BASE_URL"
-        }
-      ]
+      "framework": "fastify"
     },
     "backend": {
       "root": "backend",
